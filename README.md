@@ -1,8 +1,11 @@
 androidtimeline
 ===============
-## Developed by Leonardo Lino
+### Developed by Leonardo Lino
+![Screenshot of Android Timeline](http://www.gomuseum.net/img/timeline_screenshot1.jpg "screenshot of android timeline")
 
 Timeline library for android
+
+This is still a work in progress so there are bugs.
 
 
 ### Usage
