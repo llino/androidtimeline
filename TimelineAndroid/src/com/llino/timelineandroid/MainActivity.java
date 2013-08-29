@@ -21,7 +21,7 @@ public class MainActivity extends Activity {
 		LinearLayout tabela = (LinearLayout)findViewById(R.id.tabela);
 		LinearLayout tabelaNavbar = (LinearLayout) findViewById(R.id.navbar);
 		
-		TBuilder tbuild = new TBuilder(getApplicationContext());
+		TBuilder tbuild = new TBuilder(this);
 		tbuild.setTable(tabela);
 		tbuild.setTableNavbar(tabelaNavbar);
 		

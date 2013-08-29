@@ -9,6 +9,7 @@ import org.joda.time.Hours;
 import org.joda.time.Months;
 import org.joda.time.Years;
 
+import android.app.Dialog;
 import android.content.Context;
 import android.graphics.Color;
 import android.util.Log;
@@ -17,6 +18,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
+import android.widget.RelativeLayout;
 
 import com.llino.timelineandroid.entities.TimeCard;
 
@@ -246,10 +248,11 @@ public class TBuilder implements OnClickListener {
 		LayoutParams layoutParams = new LinearLayout.LayoutParams(
 				LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
 
-		table.removeAllViews();
-		table.setBackgroundColor(Color.BLUE);
 		
-		table.addView(view, layoutParams);
+		final Dialog dialog = new Dialog(context);
+		dialog.setContentView(R.layout.time_card_overlay);
+		dialog.show();//ee
+		
 		
 		
 		
