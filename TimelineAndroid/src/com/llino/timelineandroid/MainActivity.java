@@ -8,6 +8,7 @@ import com.llino.timelineandroid.entities.TimeCard;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.ViewGroupOverlay;
 import android.widget.LinearLayout;
 import android.widget.TableLayout;
 
@@ -70,6 +71,8 @@ public class MainActivity extends Activity {
 		tbuild.addTimeCard(tc5);
 		tbuild.addTimeCard(tc6);
 		tbuild.build();
+		
+
 		
 	}
 

@@ -8,21 +8,17 @@ import org.joda.time.Days;
 import org.joda.time.Hours;
 import org.joda.time.Months;
 import org.joda.time.Years;
-import org.joda.time.Duration;
-import org.joda.time.Period;
-
-import com.llino.timelineandroid.Navbar2.Timeitem;
-import com.llino.timelineandroid.entities.TimeCard;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.util.Log;
-import android.view.MotionEvent;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.View.OnTouchListener;
 import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
-import android.widget.ScrollView;
+
+import com.llino.timelineandroid.entities.TimeCard;
 
 public class TBuilder implements OnClickListener {
 
@@ -243,6 +239,19 @@ public class TBuilder implements OnClickListener {
 	@Override
 	public void onClick(View v) {
 		Log.i("clicou na lista", "clicou lista");
+		
+		View view = LayoutInflater.from(context).inflate(R.layout.time_card_overlay,
+				null);
+		
+		LayoutParams layoutParams = new LinearLayout.LayoutParams(
+				LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
+
+		table.removeAllViews();
+		table.setBackgroundColor(Color.BLUE);
+		
+		table.addView(view, layoutParams);
+		
+		
 		
 	}
 
