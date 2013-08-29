@@ -16,11 +16,15 @@ import com.llino.timelineandroid.entities.TimeCard;
 
 import android.content.Context;
 import android.util.Log;
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.View.OnTouchListener;
 import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
 import android.widget.ScrollView;
 
-public class TBuilder {
+public class TBuilder implements OnClickListener {
 
 	private static final int NUM_ROWS = 4;
 	private static final int TIMECARD_WIDTH = 300;
@@ -59,7 +63,6 @@ public class TBuilder {
 		initiateRows();
 
 		calculateTimespan();
-
 
 		navbar = new Navbar2(context, timespan);
 		navbar.setTimecards(timecards);
@@ -183,7 +186,13 @@ public class TBuilder {
 		LayoutParams tlparams = new LinearLayout.LayoutParams(TIMECARD_WIDTH,
 				LinearLayout.LayoutParams.WRAP_CONTENT);
 		tlparams.setMargins(offset, 0, 0, 0);
-		rows.get(rowID).addView(timecard.getView(context), tlparams);
+		
+		View v = timecard.getView(context);
+		
+		v.setOnClickListener(this);
+		
+		
+		rows.get(rowID).addView(v, tlparams);
 
 	}
 
@@ -230,6 +239,13 @@ public class TBuilder {
 	public void setTableNavbar(LinearLayout tableNavbar) {
 		this.tableNavbar = tableNavbar;
 	}
+
+	@Override
+	public void onClick(View v) {
+		Log.i("clicou na lista", "clicou lista");
+		
+	}
+
 	
 	
 
