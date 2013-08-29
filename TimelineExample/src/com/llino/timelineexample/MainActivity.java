@@ -21,7 +21,7 @@ public class MainActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);//e
+		setContentView(R.layout.activity_main);
 		
 		LinearLayout tabela = (LinearLayout)findViewById(R.id.tabela);
 		LinearLayout tabelaNavbar = (LinearLayout) findViewById(R.id.navbar);
